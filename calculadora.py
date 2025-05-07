@@ -9,13 +9,13 @@ def multiplicacion(a, b):
 
 def division(a, b):
     if b == 0:
-        return "Error: División por cero no permitida."
+        raise ValueError("No se puede dividir por cero.")
     return a / b
 
 def main():
-    print("Bienvenido a la Calculadora")
+    print("Bienvenido a la calculadora")
     while True:
-        print("\nSeleccione la operación:")
+        print("\nSeleccione una operación:")
         print("1. Suma")
         print("2. Resta")
         print("3. Multiplicación")
@@ -32,20 +32,19 @@ def main():
             try:
                 num1 = float(input("Ingrese el primer número: "))
                 num2 = float(input("Ingrese el segundo número: "))
-            except ValueError:
-                print("Error: Entrada no válida. Por favor ingrese números.")
-                continue
-            
-            if opcion == '1':
-                print(f"El resultado de la suma es: {suma(num1, num2)}")
-            elif opcion == '2':
-                print(f"El resultado de la resta es: {resta(num1, num2)}")
-            elif opcion == '3':
-                print(f"El resultado de la multiplicación es: {multiplicacion(num1, num2)}")
-            elif opcion == '4':
-                print(f"El resultado de la división es: {division(num1, num2)}")
+
+                if opcion == '1':
+                    print(f"Resultado: {suma(num1, num2)}")
+                elif opcion == '2':
+                    print(f"Resultado: {resta(num1, num2)}")
+                elif opcion == '3':
+                    print(f"Resultado: {multiplicacion(num1, num2)}")
+                elif opcion == '4':
+                    print(f"Resultado: {division(num1, num2)}")
+            except ValueError as e:
+                print(f"Error: {e}. Asegúrese de ingresar números válidos.")
         else:
-            print("Opción no válida. Por favor seleccione una opción del 1 al 5.")
+            print("Opción no válida. Intente de nuevo.")
 
 if __name__ == "__main__":
     main()
