@@ -1,30 +1,46 @@
-# Documento Funcional de la Calculadora
+# Documento Funcional: Calculadora
 
-## Descripción del Proyecto
-Este proyecto consiste en el desarrollo de una calculadora simple que permite realizar las operaciones matemáticas básicas: suma, resta, multiplicación y división. La calculadora será una aplicación de línea de comandos que interactúa con el usuario para obtener los números y la operación deseada.
+## Descripción General
+La calculadora es una aplicación que permite realizar operaciones matemáticas básicas, incluyendo suma, resta, multiplicación y división. La aplicación se ejecuta en la línea de comandos y permite al usuario seleccionar la operación deseada e ingresar los números.
 
-## Características Funcionales
-La calculadora debe permitir al usuario realizar las siguientes operaciones:
-1. **Suma:** Sumar dos números.
-2. **Resta:** Restar un número de otro.
-3. **Multiplicación:** Multiplicar dos números.
-4. **División:** Dividir un número entre otro, manejando la división por cero.
+## Funcionalidades
 
-## Requisitos No Funcionales
-- La calculadora debe ser una aplicación de línea de comandos.
-- Debe ser fácil de usar y proporcionar mensajes claros al usuario.
-- Debe manejar errores de entrada, como la división por cero y entradas no numéricas.
+### 1. Suma
+- **Descripción**: Realiza la suma de dos números.
+- **Entrada**: Dos números (a, b).
+- **Salida**: La suma de a y b.
+- **Ejemplo**: 
+  - Entrada: 5, 3
+  - Salida: 8
 
-## Ejemplo de Uso
-```
-Bienvenido a la Calculadora
-Seleccione la operación:
-1. Suma
-2. Resta
-3. Multiplicación
-4. División
-Ingrese su opción (1-4): 1
-Ingrese el primer número: 5
-Ingrese el segundo número: 3
-El resultado de la suma es: 8
-```
+### 2. Resta
+- **Descripción**: Realiza la resta de dos números.
+- **Entrada**: Dos números (a, b).
+- **Salida**: La resta de a menos b.
+- **Ejemplo**: 
+  - Entrada: 5, 3
+  - Salida: 2
+
+### 3. Multiplicación
+- **Descripción**: Realiza la multiplicación de dos números.
+- **Entrada**: Dos números (a, b).
+- **Salida**: El producto de a y b.
+- **Ejemplo**: 
+  - Entrada: 5, 3
+  - Salida: 15
+
+### 4. División
+- **Descripción**: Realiza la división de dos números.
+- **Entrada**: Dos números (a, b).
+- **Salida**: El cociente de a entre b.
+- **Consideraciones**: No se permite la división por cero.
+- **Ejemplo**: 
+  - Entrada: 6, 3
+  - Salida: 2
+
+## Consideraciones sobre Errores
+- La aplicación debe manejar la entrada de datos no válidos y mostrar un mensaje de error adecuado.
+- En caso de división por cero, se debe mostrar un mensaje de error específico.
+
+## Ejecución
+La calculadora se ejecuta en un bucle que permite al usuario realizar múltiples operaciones hasta que decida salir.
