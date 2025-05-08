@@ -13,38 +13,33 @@ def division(a, b):
     return a / b
 
 def main():
-    print("Bienvenido a la calculadora")
-    while True:
-        print("\nSeleccione una operación:")
-        print("1. Suma")
-        print("2. Resta")
-        print("3. Multiplicación")
-        print("4. División")
-        print("5. Salir")
-        
-        opcion = input("Ingrese su opción (1-5): ")
-        
-        if opcion == '5':
-            print("Saliendo de la calculadora.")
-            break
-        
-        if opcion in ['1', '2', '3', '4']:
-            try:
-                num1 = float(input("Ingrese el primer número: "))
-                num2 = float(input("Ingrese el segundo número: "))
+    print("Calculadora Básica")
+    print("Seleccione la operación:")
+    print("1. Suma")
+    print("2. Resta")
+    print("3. Multiplicación")
+    print("4. División")
 
-                if opcion == '1':
-                    print(f"Resultado: {suma(num1, num2)}")
-                elif opcion == '2':
-                    print(f"Resultado: {resta(num1, num2)}")
-                elif opcion == '3':
-                    print(f"Resultado: {multiplicacion(num1, num2)}")
-                elif opcion == '4':
+    while True:
+        seleccion = input("Ingrese el número de la operación (1/2/3/4): ")
+
+        if seleccion in ['1', '2', '3', '4']:
+            num1 = float(input("Ingrese el primer número: "))
+            num2 = float(input("Ingrese el segundo número: "))
+
+            if seleccion == '1':
+                print(f"Resultado: {suma(num1, num2)}")
+            elif seleccion == '2':
+                print(f"Resultado: {resta(num1, num2)}")
+            elif seleccion == '3':
+                print(f"Resultado: {multiplicacion(num1, num2)}")
+            elif seleccion == '4':
+                try:
                     print(f"Resultado: {division(num1, num2)}")
-            except ValueError as e:
-                print(f"Error: {e}. Asegúrese de ingresar números válidos.")
+                except ValueError as e:
+                    print(e)
         else:
-            print("Opción no válida. Intente de nuevo.")
+            print("Selección no válida. Intente de nuevo.")
 
 if __name__ == "__main__":
     main()
